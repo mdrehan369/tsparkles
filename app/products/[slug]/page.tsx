@@ -12,7 +12,7 @@ async function getProduct(
 ): Promise<{ status: boolean; data: FullProduct } | null> {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000"}/api/products/${slug}`,
+      `${process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3000"}/products/${slug}`,
     );
 
     if (!response.ok) {
